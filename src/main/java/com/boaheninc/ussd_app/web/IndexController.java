@@ -1,26 +1,22 @@
 package com.boaheninc.ussd_app.web;
 
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.boaheninc.ussd_app.model.UssdParameters;
-
 @RestController
 @RequestMapping("/api")
 public class IndexController {
     
 	@PostMapping(value="/ussd/random-poll", consumes = {"application/x-www-form-urlencoded"})
     public String index(UssdParameters params) {
-    	String response = "", sessionId, text, phoneNumber, serviceCode;
+    	String response = "", text, phoneNumber;
     	String[] textArray;
     	String[] data;
     	
-    	sessionId = params.getSessionId();
     	text = params.getText();
     	phoneNumber = params.getPhoneNumber();
-    	serviceCode = params.getServiceCode();
     	
     	/*
     	 * extract individual strings from text that are concatenated by *
@@ -30,7 +26,7 @@ public class IndexController {
     	
     	textArray = text.split("\\*");
         if(text == "") {
-    		response = "CON Welcome to the DISSOLVE GFA Polls\n"
+    		response = "CON Welcome to the DISSOLVE GFA Polls.\n"
     				+ "1. Press 1 to Continue to Polls\n"
     				+ "2. Press 0 to exit Polls";
         }else if(text.contentEquals("1")) {
@@ -41,7 +37,7 @@ public class IndexController {
         	response = "CON 1. Press 1 to vote for the motion\n"
     				+ "2. Press 2 to vote against the motion"; 
         }else if(text.contentEquals("1*" + textArray[1] + "*1") || text.contentEquals("1*" + textArray[1] + "*2")) {
-        	response = "CON give a reason for your chosen option\n"; 
+        	response = "CON Give a reason for your chosen option\n"; 
         }else if(text.contentEquals("1*" + textArray[1] + "*1*" + textArray[3]) 
         		|| text.contentEquals("1*" + textArray[1] + "*2*" + textArray[3])) {
         	//save data to db [currently only saves into an array]
