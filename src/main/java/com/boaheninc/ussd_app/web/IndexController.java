@@ -11,7 +11,7 @@ import com.boaheninc.ussd_app.model.UssdParameters;
 public class IndexController {
     
 	@PostMapping("/ussd/random-poll")
-    public String index(@RequestBody UssdParameters params) {
+    public String index(UssdParameters params) {
     	String response = "", sessionId, text, phoneNumber, serviceCode;
     	String[] textArray;
     	String[] data;
