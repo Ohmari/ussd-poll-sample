@@ -24,10 +24,11 @@ public class IndexController {
     	//extract individual strings from text that are concatenated by *
     	textArray = text.split("\\*");
     	   	
+    	System.out.println("text " + text);
         if(text == "") {
     		response = "CON Welcome to the DISSOLVE GFA Polls\nPress 1 to Continue to Polls"
     				+ "\nPress 0 to exit Polls";
-    	}else if(!textArray[0].isEmpty() && textArray[0]!="" && textArray.length==1) {
+        }else if(Integer.parseInt(text)==1) {
     		//check user's response and CONTINUE or TERMINATE session
     		switch(Integer.parseInt(textArray[0])) {
       	  case 1:
