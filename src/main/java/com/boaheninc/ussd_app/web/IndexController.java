@@ -29,20 +29,21 @@ public class IndexController {
     	 */
     	
     	textArray = text.split("\\*");
-    	int separatorOccurance = StringUtils.countOccurrencesOf(text, "*");
         if(text == "") {
-    		response = "CON Welcome to the DISSOLVE GFA Polls\nPress 1 to Continue to Polls"
-    				+ "\nPress 0 to exit Polls";
+    		response = "CON Welcome to the DISSOLVE GFA Polls\n"
+    				+ "1. Press 1 to Continue to Polls\n"
+    				+ "2. Press 0 to exit Polls";
         }else if(text.contentEquals("1")) {
       		  response = "CON Please provide your name\n"; 
         }else if(text.contentEquals("0")) {
-      		  response = "END";
-        }else if(separatorOccurance==1){
-        	response = "CON Press 1 to vote for the motion"
-    				+ "\nPress 2 to vote against the motion"; 
-        }else if(separatorOccurance==2) {
+      		  response = "END ";
+        }else if(text.contentEquals("1*" + textArray[1])){
+        	response = "CON 1. Press 1 to vote for the motion\n"
+    				+ "2. Press 2 to vote against the motion"; 
+        }else if(text.contentEquals("1*" + textArray[1] + "*1") || text.contentEquals("1*" + textArray[1] + "*2")) {
         	response = "CON give a reason for your chosen option\n"; 
-        }else if(separatorOccurance==3) {
+        }else if(text.contentEquals("1*" + textArray[1] + "*1*" + textArray[3]) 
+        		|| text.contentEquals("1*" + textArray[1] + "*2*" + textArray[3])) {
         	//save data to db [currently only saves into an array]
         	data = new String[textArray.length];
         	data[0] = phoneNumber;
@@ -51,7 +52,8 @@ public class IndexController {
         	data[3] = textArray[3]; //reason for answer
         	
         	//end session
-        	response = "END Thank you " + textArray[1] + " for partaking in the poll.\nWe appreciate!";
+        	response = "END Thank you " + textArray[1] + " for partaking in the poll.\n"
+        			+ "We appreciate!";
         }
         
         return response;
