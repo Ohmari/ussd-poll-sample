@@ -13,12 +13,12 @@ A simple project that uses USSD technology to conduct polls (Why GFA should be d
 6. Postman client for testing API before deployment to OpenShift
 
 ## Screenshots of project
-![App Screenshot 1](https://github.com/QuabenaBoahen/ussd-poll-sample/blob/master/screenshots/ussd1.PNG) <br/>
-![App Screenshot 2](https://github.com/QuabenaBoahen/ussd-poll-sample/blob/master/screenshots/ussd1.PNG) <br/>
-![App Screenshot 3](https://github.com/QuabenaBoahen/ussd-poll-sample/blob/master/screenshots/ussd3.PNG) <br/>
-![App Screenshot 4](https://github.com/QuabenaBoahen/ussd-poll-sample/blob/master/screenshots/ussd4.PNG) <br/>
-![App Screenshot 5](https://github.com/QuabenaBoahen/ussd-poll-sample/blob/master/screenshots/ussd5.PNG) <br/>
-![App Screenshot 6](https://github.com/QuabenaBoahen/ussd-poll-sample/blob/master/screenshots/ussd6.PNG) <br/>
+![App Screenshot 1](https://github.com/QuabenaBoahen/ussd-poll-sample/blob/master/screenshots/ussd1.PNG) 
+![App Screenshot 2](https://github.com/QuabenaBoahen/ussd-poll-sample/blob/master/screenshots/ussd2.PNG) 
+![App Screenshot 3](https://github.com/QuabenaBoahen/ussd-poll-sample/blob/master/screenshots/ussd3.PNG) 
+![App Screenshot 4](https://github.com/QuabenaBoahen/ussd-poll-sample/blob/master/screenshots/ussd4.PNG) 
+![App Screenshot 5](https://github.com/QuabenaBoahen/ussd-poll-sample/blob/master/screenshots/ussd5.PNG) 
+![App Screenshot 6](https://github.com/QuabenaBoahen/ussd-poll-sample/blob/master/screenshots/ussd6.PNG) 
 
 ## Contributors
 name:       Boahen Fred <br/>
