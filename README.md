@@ -22,5 +22,5 @@ A simple project that uses USSD technology to conduct polls (Why GFA should be d
 
 ## Contributors
 name:       Boahen Fred <br/>
-website:   [https://boaheninc.com](https://boaheninc.com)  <br/>
+website:   [http://quabenaboahen.com](http://quabenaboahen.com)  <br/>
 bitbucket: [https://bitbucket.com/quabenaboahen](https://bitbucket.com/quabenaboahen)
